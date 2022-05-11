@@ -6,9 +6,9 @@ module FullAdder_tb();
 	reg B;
 	reg Cin;
     wire Cout;
-	wire Y;
+	wire S;
 
-	FullAdder DUT (A,B,Cin,Y, Cout);
+	FullAdder DUT (A,B,Cin,S, Cout);
 	initial begin
 		A = 0; B = 0; Cin = 0;
 		#10;
@@ -30,8 +30,8 @@ module FullAdder_tb();
 	end
 
 	initial begin
-		$display("A B Cin || Y Cout");
-		$monitor("%b %b %b || %b %b",A,B,Cin,Y, Cout);
+		$display("A B Cin || S Cout");
+		$monitor("%b %b %b || %b %b",A,B,Cin,S, Cout);
 	end
 
 endmodule

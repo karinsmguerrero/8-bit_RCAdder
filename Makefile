@@ -1,5 +1,5 @@
 module = FullAdder
-submodules = 
+submodules = RippleCarryAdder.v
 
 sim: clean
 	# Agregan el nombre del resto de archivos del proyecto, incluyendo el testbench del diseño
