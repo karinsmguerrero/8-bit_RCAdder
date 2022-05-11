@@ -1,14 +1,19 @@
 module RippleCarryAdder(
-    input [3:0] a,
-    input [3:0] b,
-    input cin,
-    output [3:0] s,
-    output cout4);
+    input [7:0] A,
+    input [7:0] B,
+    input Cin,
+    output [7:0] S,
+    output Cout);
 
-  wire cout1,cout2,cout3;
+  wire cout1,cout2,cout3, cout4, cout5, cout6, cout7;
 
-  FullAdder fa0 (a[0], b[0], cin, s[0], cout1);
-  FullAdder fa1 (a[1], b[1], cout1, s[1], cout2);
-  FullAdder fa2 (a[2], b[2], cout2, s[2], cout3);
-  FullAdder fa3 (a[3], b[3], cout3, s[3], cout4);
+  FullAdder fa0 (A[0], B[0], Cin, S[0], cout1);
+  FullAdder fa1 (A[1], B[1], cout1, S[1], cout2);
+  FullAdder fa2 (A[2], B[2], cout2, S[2], cout3);
+  FullAdder fa3 (A[3], B[3], cout3, S[3], cout4);
+  FullAdder fa4 (A[4], B[4], cout4, S[4], cout5);
+  FullAdder fa5 (A[5], B[5], cout5, S[5], cout6);
+  FullAdder fa6 (A[6], B[6], cout6, S[6], cout7);
+  FullAdder fa7 (A[7], B[7], cout7, S[7], Cout);
+
 endmodule
