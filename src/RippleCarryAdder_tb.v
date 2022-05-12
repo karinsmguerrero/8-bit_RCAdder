@@ -16,7 +16,7 @@ module RippleCarryAdder_tb();
 	initial begin
 		$display("--- Beginning simulation ---");
 
-		file = $fopen("output.txt","w");
+		file = $fopen("output_RippleCarryAdder.txt","w");
 
 		a = 0; b = 0; cin = 0;
 		#10;
