@@ -5,12 +5,12 @@ module LSB_Two_AproximateORAdder(
   output [7:0] S,
   output Cout);
 
-wire cout1,cout2,cout3, cout4, cout5, cout6, cout7;
+wire cin, cout1,cout2,cout3, cout4, cout5, cout6, cout7;
 
 assign S[7] = A[7] | B[7];
 assign S[6] = A[6] | B[6];
-assign Cin = A[6] & B[6];
-FullAdder fa5 (A[5], B[5], Cin, S[5], cout5);
+assign cin = A[6] & B[6];
+FullAdder fa5 (A[5], B[5], cin, S[5], cout5);
 FullAdder fa4 (A[4], B[4], cout5, S[4], cout4);
 FullAdder fa3 (A[3], B[3], cout4, S[3], cout3);
 FullAdder fa2 (A[2], B[2], cout3, S[2], cout2);

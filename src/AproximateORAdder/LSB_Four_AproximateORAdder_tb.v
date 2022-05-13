@@ -1,6 +1,6 @@
 `timescale 1ns / 10ps
 
-module LSB_Four_AproximateRCAdder_tb();
+module LSB_Four_AproximateORAdder_tb();
 
 	reg [7:0] a;
 	reg [7:0] b;
@@ -11,12 +11,12 @@ module LSB_Four_AproximateRCAdder_tb();
 	integer i,j;
 	integer file;
 
-	LSB_Four_AproximateRCAdder DUT (.A(a),.B(b),.Cin(cin),.S(s),.Cout(cout));
+	LSB_Four_AproximateORAdder DUT (.A(a),.B(b),.Cin(cin),.S(s),.Cout(cout));
 
 	initial begin
 		$display("--- Beginning simulation ---");
 
-		file = $fopen("output_LSB_Four_AproximateRCAdder.txt","w");
+		file = $fopen("output_LSB_Four_AproximateORAdder.txt","w");
 
 		a = 0; b = 0; cin = 0;
 		#10;

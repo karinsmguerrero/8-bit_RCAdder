@@ -1,6 +1,6 @@
 `timescale 1ns / 10ps
 
-module LSB_Three_AproximateRCAdder_tb();
+module LSB_Three_AproximateORAdder_tb();
 
 	reg [7:0] a;
 	reg [7:0] b;
@@ -11,12 +11,12 @@ module LSB_Three_AproximateRCAdder_tb();
 	integer i,j;
 	integer file;
 
-	LSB_Three_AproximateRCAdder DUT (.A(a),.B(b),.Cin(cin),.S(s),.Cout(cout));
+	LSB_Three_AproximateORAdder DUT (.A(a),.B(b),.Cin(cin),.S(s),.Cout(cout));
 
 	initial begin
 		$display("--- Beginning simulation ---");
 
-		file = $fopen("output_LSB_Three_AproximateRCAdder.txt","w");
+		file = $fopen("output_LSB_Three_AproximateORAdder.txt","w");
 
 		a = 0; b = 0; cin = 0;
 		#10;

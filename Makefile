@@ -1,8 +1,6 @@
-module = AproximateORAdder/LSB_Two_AproximateORAdder
-submodules = FullAdder.v RippleCarryAdder.v AproximateAdder/AproximateAdder.v \
-AproximateAdder/LSB_One_AproximateRCAdder.v AproximateAdder/LSB_Two_AproximateRCAdder.v \
-AproximateAdder/LSB_Three_AproximateRCAdder.v AproximateAdder/LSB_Four_AproximateRCAdder.v \
-AproximateORAdder/LSB_One_AproximateORAdder.v 
+module = AproximateORAdder/LSB_Four_AproximateORAdder
+submodules = FullAdder.v RippleCarryAdder.v 
+  
 
 sim: clean
 	# Agregan el nombre del resto de archivos del proyecto, incluyendo el testbench del diseño
