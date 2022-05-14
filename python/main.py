@@ -54,10 +54,6 @@ def main():
     generatePMF('LSB_Four_AproximateORAdder')
     """
 
-
-    getErrorDistances('LSB_Three_AproximateRCAdder')
-
-    """
     getErrorDistances('RippleCarryAdder')
     getErrorDistances('LSB_One_AproximateRCAdder')
     getErrorDistances('LSB_Two_AproximateRCAdder')
@@ -67,7 +63,7 @@ def main():
     getErrorDistances('LSB_Two_AproximateORAdder')
     getErrorDistances('LSB_Three_AproximateORAdder')
     getErrorDistances('LSB_Four_AproximateORAdder')
-    """
+    
 
 
 if __name__ == "__main__":
